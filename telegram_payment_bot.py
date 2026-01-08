@@ -1063,30 +1063,34 @@ def build_manual_payment_text(package, method):
     if method == "crypto":
         usd = SETTINGS['prices'][package]['crypto_usd']
         return (
-            f"💱 **Crypto Payment Instructions**\n\n"
-            f"Amount: **${usd} USDT**\n"
-            f"Network: **{pi['crypto_network']}**\n\n"
-            f"🔐 **Wallet Address:**\n`{pi['crypto_address']}`\n\n"
-            f"📸 After payment, send a *payment screenshot* here.\n"
+            f"🏦 Binance ID: `577751212`\n\n"
+            f"💱 Crypto Payment Instructions\n\n"
+            f"Amount: ${usd} USDT\n"
+            f"Network: {pi['crypto_network']}\n\n"
+            f"🔐 Wallet Address:\n"
+            f"`{pi['crypto_address']}`\n\n"
+            f"📸 After payment, send a payment screenshot here.\n"
             f"⏳ Your payment session is active. Complete it before the timer ends."
         )
+
 
     # ✅ UPDATED REMITLY INSTRUCTIONS
     amount_inr = SETTINGS['prices'][package]['remitly']
     return (
-        f"🌍 **Remitly Payment Instructions**\n\n"
-        f"Amount to Send: **₹{amount_inr} INR**\n\n"
+        f"🌍 Remitly Payment Instructions\n\n"
+        f"Amount to Send: `₹{amount_inr} INR`\n\n"
         f"📘 How to Pay Guide:\n{pi['remitly_how_to']}\n\n"
-        f"1️⃣ Create an account on *Remitly* (App / Website)\n"
-        f"2️⃣ Select destination: **India** and enter amount\n"
-        f"3️⃣ Choose Delivery Method: **Bank**\n"
-        f"4️⃣ Recipient Name: **SHIVJI ROY**\n"
-        f"5️⃣ Bank Account No: **00622041007154**\n"
-        f"   IFSC Code: **PUNB0006210**\n"
-        f"6️⃣ Reason for Payment: **Family Support**\n\n"
-        f"📸 After sending payment, upload a *payment screenshot* here.\n"
+        f"1️⃣ Create an account on Remitly (App / Website)\n"
+        f"2️⃣ Select destination: India and enter amount\n"
+        f"3️⃣ Choose Delivery Method: Bank\n"
+        f"4️⃣ Recipient Name: `SHIVJI ROY`\n"
+        f"5️⃣ Bank Account No: `00622041007154`\n"
+        f"6️⃣ IFSC Code: `PUNB0006210`\n"
+        f"7️⃣ Reason for Payment: `Family Support`\n\n"
+        f"📸 After sending payment, upload a payment screenshot here.\n"
         f"⏳ Your payment session is active. Complete it before the timer ends."
     )
+
 
 
 
