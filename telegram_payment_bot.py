@@ -260,13 +260,13 @@ TELEGRAM_TOKEN = os.environ.get("BOT_TOKEN")
 
 def main_keyboard():
     kb = [
-        [InlineKeyboardButton("🔥 VIP", callback_data="choose_vip")],
+        [InlineKeyboardButton("VIP", callback_data="choose_vip")],
       
         # [InlineKeyboardButton("🌑 DARK", callback_data="choose_dark")],
         # [InlineKeyboardButton("💥 BOTH (30% off)", callback_data="choose_both")],
       
-        [InlineKeyboardButton("📊 Check Payment Status", callback_data="status_btn")],
-        [InlineKeyboardButton("🆘 Contact Us", callback_data="help")],
+        [InlineKeyboardButton("Check Payment Status", callback_data="status_btn")],
+        [InlineKeyboardButton("Contact Us", callback_data="help")],
     ]
     return InlineKeyboardMarkup(kb)
 
@@ -285,7 +285,7 @@ async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     text = (
     f"Welcome {name} 👋\n\n"
-    "Select a package below to proceed with secure access."
+    "Hello I am here to take Vip subscription please select the package."
     )
 
 
@@ -492,7 +492,7 @@ async def callback_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     # ----- HELP -----
     if data == "help":
-        await query.message.reply_text("Contact help: @Dark123222_bot")
+        await query.message.reply_text("Contact help: @Vip_help1_bot")
         return
 
     # ----- STATUS BUTTON -----
@@ -537,13 +537,13 @@ async def callback_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
         package = data.split("_")[1]
         kb = [
-            [InlineKeyboardButton(f"💸 UPI (Fast/Auto) - ₹{SETTINGS['prices'][package]['upi']}",
+            [InlineKeyboardButton(f"UPI (Fast/Auto) - ₹{SETTINGS['prices'][package]['upi']}",
                                   callback_data=f"pay_upi:{package}")],
-            [InlineKeyboardButton(f"🪙 Crypto - ${SETTINGS['prices'][package]['crypto_usd']}",
+            [InlineKeyboardButton(f"Crypto - ${SETTINGS['prices'][package]['crypto_usd']}",
                                   callback_data=f"pay_crypto:{package}")],
-            [InlineKeyboardButton(f"🌍 Remitly - ₹{SETTINGS['prices'][package]['remitly']}",
+            [InlineKeyboardButton(f"Remitly - ₹{SETTINGS['prices'][package]['remitly']}",
                                   callback_data=f"pay_remitly:{package}")],
-            [InlineKeyboardButton("❌ Cancel", callback_data="cancel")],
+            [InlineKeyboardButton("Cancel", callback_data="cancel")],
         ]
         await query.message.reply_text(
             f"Select Payment Method for {package.upper()}",
@@ -1080,9 +1080,9 @@ def build_manual_payment_text(package, method):
         f"1️⃣ Create an account on *Remitly* (App / Website)\n"
         f"2️⃣ Select destination: **India** and enter amount\n"
         f"3️⃣ Choose Delivery Method: **Bank**\n"
-        f"4️⃣ Recipient Name: **Govind Mahto**\n"
-        f"5️⃣ Bank Account No: **002020391365887**\n"
-        f"   IFSC Code: **JIOP0000001**\n"
+        f"4️⃣ Recipient Name: **SHIVJI ROY**\n"
+        f"5️⃣ Bank Account No: **00622041007154**\n"
+        f"   IFSC Code: **PUNB0006210**\n"
         f"6️⃣ Reason for Payment: **Family Support**\n\n"
         f"📸 After sending payment, upload a *payment screenshot* here.\n"
         f"⏳ Your payment session is active. Complete it before the timer ends."
