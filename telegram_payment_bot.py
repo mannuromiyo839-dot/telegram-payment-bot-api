@@ -1055,27 +1055,26 @@ def build_manual_payment_text(package, method):
     if method == "crypto":
         usd = SETTINGS['prices'][package]['crypto_usd']
         return (
-            f"Crypto Payment Instructions\n\n"
-            f"Amount: ${usd} USDT\n"
-            f"Network: {pi['crypto_network']}\n\n"
-            f"Binance ID: `577751212`\n\n"
-            f"Wallet Address:\n"
-            f"`{pi['crypto_address']}`\n\n"
+            f"*Crypto Payment Instructions*\n\n"
+            f"*Amount:* `${usd} USDT`\n"
+            f"*Network:* `{pi['crypto_network']}`\n"
+            f"*Binance ID:* `577751212`\n"
+            f"*Wallet Address:* `{pi['crypto_address']}`\n\n"
             f"After payment, send a payment screenshot here."
         )
 
     amount_inr = SETTINGS['prices'][package]['remitly']
     return (
-        f"Remitly Payment Instructions\n\n"
-        f"Amount to Send: `₹{amount_inr} INR`\n\n"
-        f"How to Pay Guide:\n{pi['remitly_how_to']}\n\n"
-        f"Recipient Name: `SHIVJI ROY`\n"
-        f"Bank Account No: `00622041007154`\n"
-        f"IFSC Code: `PUNB0006210`\n"
-        f"Reason for Payment: `Family Support`\n\n"
+        f"*Remitly Payment Instructions*\n\n"
+        f"*Amount to Send:* `₹{amount_inr} INR`\n"
+        f"*Recipient Name:* `SHIVJI ROY`\n"
+        f"*Bank Account No:* `00622041007154`\n"
+        f"*Bank Name:* `Punjab National Bank`\n"
+        f"*IFSC Code:* `PUNB0006210`\n"
+        f"*Reason for Payment:* `Family Support`\n\n"
+        f"*How to Pay Guide:*\n{pi['remitly_how_to']}\n\n"
         f"After sending payment, upload a payment screenshot here."
     )
-
 
 
 
