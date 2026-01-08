@@ -533,7 +533,7 @@ async def callback_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
                                   callback_data=f"pay_upi:{package}")],
             [InlineKeyboardButton(f"Crypto - ${SETTINGS['prices'][package]['crypto_usd']}",
                                   callback_data=f"pay_crypto:{package}")],
-            [InlineKeyboardButton(f"Bank A/C (Remitly) - ₹{SETTINGS['prices'][package]['remitly']}",
+            [InlineKeyboardButton("Bank A/C (Remitly)",
                                   callback_data=f"pay_remitly:{package}")],
             [InlineKeyboardButton("Cancel", callback_data="cancel")],
         ]
