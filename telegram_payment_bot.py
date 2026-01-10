@@ -285,7 +285,8 @@ async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     text = (
     f"Welcome {name} 👋\n\n"
-    "Hello I am here to take Vip subscription please select the package."
+    "Hello I am here to take Vip subscription please select the package.\n\n"
+    "All Payment for Lifetime Membership"
     )
 
 
